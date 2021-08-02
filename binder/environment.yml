@@ -1,0 +1,7 @@
+name: ipyurl
+channels:
+  - conda-forge
+dependencies:
+  - pip
+  - pip:
+    - ipyurl
