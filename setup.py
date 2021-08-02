@@ -64,7 +64,7 @@ cmdclass['jsdeps'] = combine_commands(
 
 setup_args = dict(
     name            = name,
-    description     = 'A Jupyter Widget Library for accessing the server's URL',
+    description     = "A Jupyter Widget Library for accessing the server's URL",
     version         = version,
     scripts         = glob(pjoin('scripts', '*')),
     cmdclass        = cmdclass,

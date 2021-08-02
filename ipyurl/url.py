@@ -15,7 +15,7 @@ from traitlets import Unicode, Bool
 from ._frontend import module_name, module_version
 
 
-class UrlWidget(DOMWidget):
+class Url(DOMWidget):
     """TODO: Add docstring here
     """
     _model_name = Unicode('UrlModel').tag(sync=True)
