@@ -1,6 +1,6 @@
 {
   "name": "ipyurl",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Jupyter Widget Library for accessing the server's URL",
   "keywords": [
     "jupyter",
@@ -10,8 +10,7 @@
   ],
   "files": [
     "lib/**/*.js",
-    "dist/*.js",
-    "css/*.css"
+    "dist/*.js"
   ],
   "homepage": "https://github.com/davidbrochart/ipyurl",
   "bugs": {

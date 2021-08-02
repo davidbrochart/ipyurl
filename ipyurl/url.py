@@ -26,7 +26,7 @@ class Url(DOMWidget):
     _view_module_version = Unicode(module_version).tag(sync=True)
 
     toggle = Bool(False).tag(sync=True)
-    url = Unicode().tag(sync=True)
+    url = Unicode('').tag(sync=True)
 
     async def get_url(self):
         self.toggle = not self.toggle

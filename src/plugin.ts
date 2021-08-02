@@ -14,9 +14,9 @@ import { MODULE_NAME, MODULE_VERSION } from './version';
 const EXTENSION_ID = 'ipyurl:plugin';
 
 /**
- * The example plugin.
+ * The url plugin.
  */
-const examplePlugin: IPlugin<Application<Widget>, void> = ({
+const urlPlugin: IPlugin<Application<Widget>, void> = ({
   id: EXTENSION_ID,
   requires: [IJupyterWidgetRegistry],
   activate: activateWidgetExtension,
@@ -25,7 +25,7 @@ const examplePlugin: IPlugin<Application<Widget>, void> = ({
 // the "as unknown as ..." typecast above is solely to support JupyterLab 1
 // and 2 in the same codebase and should be removed when we migrate to Lumino.
 
-export default examplePlugin;
+export default urlPlugin;
 
 /**
  * Activate the widget extension.
