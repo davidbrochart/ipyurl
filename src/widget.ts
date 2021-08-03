@@ -21,7 +21,8 @@ export class UrlModel extends DOMWidgetModel {
       _view_name: UrlModel.view_name,
       _view_module: UrlModel.view_module,
       _view_module_version: UrlModel.view_module_version,
-      toggle: false,
+      toggle_request: false,
+      toggle_reply: false,
       url: '',
     };
   }
@@ -41,16 +42,23 @@ export class UrlModel extends DOMWidgetModel {
 
 export class UrlView extends DOMWidgetView {
   render() {
-    this.toggle_changed();
-    this.model.on('change:toggle', this.toggle_changed, this);
+    this.get_url();
+    this.model.on('change:toggle_request', this.toggle_request_changed, this);
   }
 
-  toggle_changed() {
-    const settings = ServerConnection.makeSettings();
-    this.model.set('url', settings.baseUrl);
+  toggle_request_changed() {
+    this.get_url();
     // notify the URL has been updated
-    const toggle = this.model.get('toggle');
-    this.model.set('toggle', !toggle);
+    const toggle_reply = this.model.get('toggle_reply');
+    console.log('toggle_reply', toggle_reply);
+    this.model.set('toggle_reply', !toggle_reply);
+    this.model.save_changes();
+  }
+
+  get_url() {
+    const settings = ServerConnection.makeSettings();
+    console.log('url', settings.baseUrl);
+    this.model.set('url', settings.baseUrl);
     this.model.save_changes();
   }
 }

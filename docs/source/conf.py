@@ -175,7 +175,7 @@ texinfo_documents = [
      'ipyurl Documentation',
      author,
      'ipyurl',
-     'A Jupyter Widget Library for accessing the server's URL',
+     "A Jupyter Widget Library for accessing the server's URL",
      'Miscellaneous'),
 ]
 

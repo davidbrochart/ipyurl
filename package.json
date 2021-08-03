@@ -1,6 +1,6 @@
 {
   "name": "ipyurl",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A Jupyter Widget Library for accessing the server's URL",
   "keywords": [
     "jupyter",

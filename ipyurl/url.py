@@ -25,12 +25,13 @@ class Url(DOMWidget):
     _view_module = Unicode(module_name).tag(sync=True)
     _view_module_version = Unicode(module_version).tag(sync=True)
 
-    toggle = Bool(False).tag(sync=True)
+    toggle_request = Bool(False).tag(sync=True)
+    toggle_reply = Bool(False).tag(sync=True)
     url = Unicode('').tag(sync=True)
 
     async def get_url(self):
-        self.toggle = not self.toggle
-        await wait_for_change(self, 'toggle')
+        self.toggle_request = not self.toggle_request
+        await wait_for_change(self, 'toggle_reply')
         return self.url
 
 
