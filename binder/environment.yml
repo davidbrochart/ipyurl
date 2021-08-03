@@ -4,4 +4,4 @@ channels:
 dependencies:
   - pip
   - pip:
-    - ipyurl
+    - ipyurl==0.1.2
